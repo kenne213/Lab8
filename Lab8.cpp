@@ -95,7 +95,7 @@ int main()
                 PhysicsSprite& duck = ducks.Create();
                 duck.setTexture(duckTexture);
                 Vector2f size = duck.getSize();
-                duck.setCenter(Vector2f(50, 20 + (size.y / 2)));  // Spawn at the left side
+                duck.setCenter(Vector2f(50, 20 + (size.y / 2)));
                 duck.setVelocity(Vector2f(0.25, 0));
                 world.AddPhysicsBody(duck);
 
@@ -136,13 +136,12 @@ int main()
             arrowCountText.setFont(font);
             arrowCountText.setPosition(Vector2f(10, 550));
             window.draw(arrowCountText);
-            //world.VisualizeAllBounds(window);
 
             window.display();
         }
     }
 
-    window.display(); // this is needed to see the last frame
+    window.display();
    
     bool exitSimulation(false);
     PhysicsRectangle backboard;
